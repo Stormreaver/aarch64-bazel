@@ -7,7 +7,7 @@ Linux firefly 4.4.154 #24 SMP Tue Sep 25 12:47:11 CST 2018 aarch64 aarch64 aarch
 Use the following command to install<br>
 sudo cp bazel /usr/local/bin/<br>
 <br>
-to build I followed the bazel install from source instructions but my device defaults were too restrictive.<br>
+to build I followed the bazel install from source instructions but my device defaults were too restrictive. When bootstrapping, building with a previous version seemed to work fine.<br>
 <br>
 exporting <br>
 export BAZEL_JAVAC_OPTS="-J-Xms512m -J-Xmx1024m -J-Xss1024k"<br>

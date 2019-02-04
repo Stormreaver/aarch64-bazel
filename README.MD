@@ -26,3 +26,9 @@ run "${JAVAC}" -classpath "${classpath}" -sourcepath ...
 run "${JAVAC}" -classpath "${classpath}" -J-Xms512m -J-Xmx1024m -J-Xss1024k -sourcepath ...
 
 in scripts/bootstrap/compile.sh
+
+
+after doing either of the above, to prevent resource exhaustion in versions between 0.12 and 0.22 I also had to modify 
+compile.sh in the main directory changing bazel_build line options to limit resources
+
+--platforms=@bazel_tools//platforms:target_platform --jobs 10 --local_resources 2048,.5,1.0

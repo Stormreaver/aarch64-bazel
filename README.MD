@@ -31,8 +31,8 @@ compile.sh in the main directory changing bazel_build line options to limit reso
 
 
 Some versions of bazel won't build other versions. There are incompatible changes between:
-V0.12->V0.15
-V0.14->V0.16
+V0.12->V0.15<br>
+V0.14->V0.16<br>
 
 
 What will work:

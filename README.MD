@@ -15,13 +15,16 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode)
 Use the following command to install
 sudo cp bazel /usr/local/bin/
 
-to build I followed the bazel install from source instructions but needed to either export:
+to build I followed the bazel install from source instructions but my device has limited resources.
 
+exporting 
 export BAZEL_JAVAC_OPTS="-J-Xms512m -J-Xmx1024m -J-Xss1024k"
 
-or modify
+did not seem to pass these flags to javac, I needed to modify
 
 run "${JAVAC}" -classpath "${classpath}" -sourcepath ...
+
+and add
 
 run "${JAVAC}" -classpath "${classpath}" -J-Xms512m -J-Xmx1024m -J-Xss1024k -sourcepath ...
 
